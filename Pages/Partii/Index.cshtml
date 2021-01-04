@@ -1,0 +1,56 @@
+﻿@page
+@model InfoPartiiSchi.Pages.Partii.IndexModel
+
+@{
+    ViewData["Title"] = "Partii";
+}
+
+<h1>Index</h1>
+
+<p>
+    @if (this.User.IsInRole("Admin"))
+    {
+        <a asp-page="Create">Create New</a>
+    }
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Partie[0].Nume)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Partie[0].Lungime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Partie[0].Statiune.Nume)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Partie) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nume)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Lungime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Statiune.Nume)
+            </td>
+            <td>
+                @if (this.User.IsInRole("Admin"))
+                {
+                    <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a>
+                }|
+                @if (this.User.IsInRole("Admin")){
+                    <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                }|
+                <a asp-page="./Details" asp-route-id="@item.ID">Details</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

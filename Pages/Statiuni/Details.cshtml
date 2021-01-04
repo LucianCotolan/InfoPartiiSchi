@@ -1,0 +1,34 @@
+﻿@page
+@model InfoPartiiSchi.Pages.Statiuni.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Statiune</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Statiune.Nume)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Statiune.Nume)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Statiune.Judet)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Statiune.Judet)
+        </dd>
+    </dl>
+</div>
+<div>
+    @if (this.User.IsInRole("Admin"))
+    {
+        <a asp-page="./Edit" asp-route-id="@Model.Statiune.ID">Edit</a>
+    }|
+    <a asp-page="./Index">Back to List</a>
+</div>
