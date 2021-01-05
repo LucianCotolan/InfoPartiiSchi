@@ -1,13 +1,13 @@
 ﻿@page
 @model InfoPartiiSchi.Pages.Partii.EditModel
-
+@inject CommonLocalizationService localizer
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = localizer.Get("Edit");
 }
 
-<h1>Edit</h1>
+<h1>@localizer.Get("Edit")</h1>
 
-<h4>Partie</h4>
+<h4>@localizer.Get("Ski track")</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -15,49 +15,49 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <input type="hidden" asp-for="Partie.ID" />
             <div class="form-group">
-                <label asp-for="Partie.Nume" class="control-label"></label>
+                <label asp-for="Partie.Nume" class="control-label">@localizer.Get("Name")</label>
                 <input asp-for="Partie.Nume" class="form-control" />
                 <span asp-validation-for="Partie.Nume" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Partie.Lungime" class="control-label"></label>
+                <label asp-for="Partie.Lungime" class="control-label">@localizer.Get("Track Length")</label>
                 <input asp-for="Partie.Lungime" class="form-control" />
                 <span asp-validation-for="Partie.Lungime" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Partie.AltitudineMaxima" class="control-label"></label>
+                <label asp-for="Partie.AltitudineMaxima" class="control-label">@localizer.Get("Maximum Altitude")</label>
                 <input asp-for="Partie.AltitudineMaxima" class="form-control" />
                 <span asp-validation-for="Partie.AltitudineMaxima" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Partie.AltitudineMinima" class="control-label"></label>
+                <label asp-for="Partie.AltitudineMinima" class="control-label">@localizer.Get("Minimum Altitude")</label>
                 <input asp-for="Partie.AltitudineMinima" class="form-control" />
                 <span asp-validation-for="Partie.AltitudineMinima" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Partie.Dificultate" class="control-label"></label>
+                <label asp-for="Partie.Dificultate" class="control-label">@localizer.Get("Dificulty")</label>
                 <input asp-for="Partie.Dificultate" class="form-control" />
                 <span asp-validation-for="Partie.Dificultate" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Partie.Video" class="control-label"></label>
+                <label asp-for="Partie.Video" class="control-label">@localizer.Get("LiveFeed")</label>
                 <input asp-for="Partie.Video" class="form-control" />
                 <span asp-validation-for="Partie.Video" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Partie.StatiuneID" class="control-label">Statiune</label>
+                <label asp-for="Partie.StatiuneID" class="control-label">@localizer.Get("Ski resort")</label>
                 <select asp-for="Partie.StatiuneID" class="form-control" asp-items="ViewBag.StatiuneID"></select>
                 <span asp-validation-for="Partie.StatiuneID" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value=@localizer.Get("Save") class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
 
 <div>
-    <a asp-page="./Index">Back to List</a>
+    <a asp-page="./Index">@localizer.Get("Back to List")</a>
 </div>
 
 @section Scripts {

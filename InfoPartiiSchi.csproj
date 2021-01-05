@@ -18,4 +18,18 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\CommonResources.ro.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\Pages\IndexModel.ro.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Resources\Pages\Partii\" />
+    <Folder Include="Resources\Pages\Statiuni\" />
+  </ItemGroup>
+
 </Project>

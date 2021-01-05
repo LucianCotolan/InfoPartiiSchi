@@ -1,24 +1,24 @@
 ﻿@page
 @model InfoPartiiSchi.Pages.Statiuni.DetailsModel
-
+@inject CommonLocalizationService localizer
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = localizer.Get("Details");
 }
 
-<h1>Details</h1>
+<h1>@localizer.Get("Details")</h1>
 
 <div>
-    <h4>Statiune</h4>
+    <h4>@localizer.Get("Ski resort")</h4>
     <hr />
     <dl class="row">
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Statiune.Nume)
+            @localizer.Get("Name")
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Statiune.Nume)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.Statiune.Judet)
+            @localizer.Get("County")
         </dt>
         <dd class="col-sm-10">
             @Html.DisplayFor(model => model.Statiune.Judet)
@@ -28,7 +28,7 @@
 <div>
     @if (this.User.IsInRole("Admin"))
     {
-        <a asp-page="./Edit" asp-route-id="@Model.Statiune.ID">Edit</a>
+    <a asp-page="./Edit" asp-route-id="@Model.Statiune.ID">@localizer.Get("Edit")</a>
     }|
-    <a asp-page="./Index">Back to List</a>
+<a asp-page="./Index">@localizer.Get("Back to List")</a>
 </div>

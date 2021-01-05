@@ -12,6 +12,10 @@ using InfoPartiiSchi.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
+using Microsoft.Extensions.Options;
+using InfoPartiiSchi.Services;
 
 namespace InfoPartiiSchi
 {
@@ -37,6 +41,22 @@ namespace InfoPartiiSchi
                  .AddEntityFrameworkStores<ApplicationDbContext>();
 
             services.AddRazorPages();
+
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                var supportedCultures = new[]
+                {
+                    new CultureInfo("ro"),
+                    new CultureInfo("en-GB")
+                };
+                options.DefaultRequestCulture = new RequestCulture("ro");
+                options.SupportedCultures = supportedCultures;
+                options.SupportedUICultures = supportedCultures;
+            });
+
+            services.AddSingleton<CommonLocalizationService>();
+            services.AddMvc().AddViewLocalization();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -58,6 +78,9 @@ namespace InfoPartiiSchi
             app.UseStaticFiles();
 
             app.UseRouting();
+
+            var localizationOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>().Value;
+            app.UseRequestLocalization(localizationOptions);
 
             app.UseAuthentication();
             app.UseAuthorization();
