@@ -39,7 +39,7 @@ namespace InfoPartiiSchi.Pages.Partii
             {
                 return NotFound();
             }
-           ViewData["StatiuneID"] = new SelectList(_context.Statiune, "ID", "ID");
+           ViewData["StatiuneID"] = new SelectList(_context.Statiune, "ID", "Nume");
             return Page();
         }
 

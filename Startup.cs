@@ -16,6 +16,7 @@ using System.Globalization;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.Extensions.Options;
 using InfoPartiiSchi.Services;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace InfoPartiiSchi
 {
@@ -56,7 +57,7 @@ namespace InfoPartiiSchi
             });
 
             services.AddSingleton<CommonLocalizationService>();
-            services.AddMvc().AddViewLocalization();
+            services.AddMvc().AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -74,16 +75,16 @@ namespace InfoPartiiSchi
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
+            app.UseRouting();
             app.UseStaticFiles();
 
-            app.UseRouting();
-
-            var localizationOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>().Value;
-            app.UseRequestLocalization(localizationOptions);
+            var localizationOptions = app.ApplicationServices.GetService<IOptions<RequestLocalizationOptions>>();
+            app.UseRequestLocalization(localizationOptions.Value);
 
             app.UseAuthentication();
             app.UseAuthorization();
+
+            app.UseHttpsRedirection();
 
             app.UseEndpoints(endpoints =>
             {

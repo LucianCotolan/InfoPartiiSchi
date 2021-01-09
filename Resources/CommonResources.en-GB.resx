@@ -117,82 +117,97 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&lt;strong&gt;Cotolan Lucian-Marian&lt;/strong&gt;: &lt;em&gt;programator(coder)&lt;/em&gt;" xml:space="preserve">
+    <value>&lt;strong&gt;Cotolan Lucian-Marian&lt;/strong&gt;: &lt;em&gt;programmer(coder)&lt;/em&gt;</value>
+  </data>
+  <data name="&lt;strong&gt;Tilea Adina&lt;/strong&gt;: &lt;em&gt;manager proiect&lt;/em&gt;" xml:space="preserve">
+    <value>&lt;strong&gt;Tilea Adina&lt;/strong&gt;: &lt;em&gt;project manager&lt;/em&gt;</value>
+  </data>
+  <data name="&lt;strong&gt;Vacaru Alina&lt;/strong&gt;: &lt;em&gt;tester&lt;/em&gt;" xml:space="preserve">
+    <value>&lt;strong&gt;Vacaru Alina&lt;/strong&gt;: &lt;em&gt;tester&lt;/em&gt;</value>
+  </data>
+  <data name="Aplicatia&amp;nbsp;&lt;strong&gt;&lt;em&gt;Info P&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;artiiS&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;chi&lt;/em&gt;&lt;/strong&gt;&amp;nbsp;prezintă&amp;nbsp;informatii&amp;nbsp;despre&amp;nbsp;starea&amp;nbsp;partiilor&amp;nbsp;din Romania, sub forma&amp;nbsp;tabelara,&amp;nbsp;astfel&amp;nbsp;incat&amp;nbsp;utilizatorul&amp;nbsp;sa&amp;nbsp;poata&amp;nbsp;alege&amp;nbsp;domeniul&amp;nbsp;schiabil&amp;nbsp;de care&amp;nbsp;este&amp;nbsp;interesat.&amp;nbsp;" xml:space="preserve">
+    <value>&lt;strong&gt;&lt;em&gt;Info P&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;artiiS&lt;/em&gt;&lt;/strong&gt;&lt;strong&gt;&lt;em&gt;chi&lt;/em&gt;&lt;/strong&gt;&amp;nbsp;presents&amp;nbsp;informations&amp;nbsp;about&amp;nbsp;the state&amp;nbsp;of ski tracks&amp;nbsp;in Romania, in a table like form&amp;nbsp;so the user can choose which ski resorts to viwe&amp;nbsp;</value>
+  </data>
   <data name="Are you sure you want to delete this?" xml:space="preserve">
-    <value>Sunteți sigur că vreți să ștergeți asta?</value>
+    <value>Are you sure you want to delete this?</value>
   </data>
   <data name="Back to List" xml:space="preserve">
-    <value>Înapoi la listă</value>
+    <value>Back to List</value>
   </data>
   <data name="County" xml:space="preserve">
-    <value>Județ</value>
+    <value>County</value>
   </data>
   <data name="Create" xml:space="preserve">
-    <value>Crează</value>
+    <value>Create</value>
   </data>
   <data name="Create New" xml:space="preserve">
-    <value>Crează nou</value>
+    <value>Create New</value>
   </data>
   <data name="Delete" xml:space="preserve">
-    <value>Șterge</value>
+    <value>Delete</value>
   </data>
   <data name="Details" xml:space="preserve">
-    <value>Detalii</value>
+    <value>Details</value>
   </data>
   <data name="Dificulty" xml:space="preserve">
-    <value>Dificultate</value>
+    <value>Dificulty</value>
   </data>
   <data name="Edit" xml:space="preserve">
-    <value>Editează</value>
+    <value>Edit</value>
   </data>
   <data name="Hello" xml:space="preserve">
-    <value>Salutare</value>
+    <value>Hello</value>
   </data>
   <data name="Help" xml:space="preserve">
-    <value>Ajutor</value>
+    <value>Help</value>
   </data>
   <data name="Homepage" xml:space="preserve">
-    <value>Acasă</value>
+    <value>Homepage</value>
   </data>
   <data name="LiveFeed" xml:space="preserve">
-    <value>VideoLive</value>
+    <value>LiveFeed</value>
   </data>
   <data name="Login" xml:space="preserve">
-    <value>Autentificare</value>
+    <value>Login</value>
   </data>
   <data name="Logout" xml:space="preserve">
-    <value>Deconectați-vă</value>
+    <value>Logout</value>
   </data>
   <data name="Maximum Altitude" xml:space="preserve">
-    <value>Altitudine Maximă</value>
+    <value>Maximum Altitude</value>
+  </data>
+  <data name="Membrii echipei:" xml:space="preserve">
+    <value>Team Members:</value>
   </data>
   <data name="Minimum Altitude" xml:space="preserve">
-    <value>Altitudine Minimă</value>
+    <value>Minimum Altitude</value>
   </data>
   <data name="Name" xml:space="preserve">
-    <value>Nume</value>
+    <value>Name</value>
   </data>
   <data name="Privacy" xml:space="preserve">
-    <value>Politica de Confidențialitate</value>
+    <value>Privacy</value>
   </data>
   <data name="Register" xml:space="preserve">
-    <value>Înregistrează-te</value>
+    <value>Register</value>
   </data>
   <data name="Save" xml:space="preserve">
-    <value>Salvați</value>
+    <value>Save</value>
   </data>
   <data name="Ski resort" xml:space="preserve">
-    <value>Stațiune</value>
+    <value>Ski resort</value>
   </data>
   <data name="Ski resorts" xml:space="preserve">
-    <value>Stațiuni</value>
+    <value>Ski resorts</value>
   </data>
   <data name="Ski track" xml:space="preserve">
-    <value>Pârtie</value>
+    <value>Ski track</value>
   </data>
   <data name="Ski tracks" xml:space="preserve">
-    <value>Pârtii</value>
+    <value>Ski tracks</value>
   </data>
   <data name="Track Length" xml:space="preserve">
-    <value>Lungime Pârtie</value>
+    <value>Track Length</value>
   </data>
 </root>

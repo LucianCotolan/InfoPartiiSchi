@@ -12,7 +12,7 @@
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">@localizer.Get("Homepage")</a>
+                <a class="navbar-brand" asp-route-culture="@Context.Request.RouteValues["culture"]" asp-page="/Index">@localizer.Get("Homepage")</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -21,10 +21,10 @@
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Statiuni/Index">@localizer.Get("Ski resorts")</a>
+                            <a class="nav-link text-light" asp-route-culture="@Context.Request.RouteValues["culture"]" asp-page="/Statiuni/Index">@localizer.Get("Ski resorts")</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-page="/Partii/Index">@localizer.Get("Ski tracks")</a>
+                            <a class="nav-link text-light" asp-route-culture="@Context.Request.RouteValues["culture"]" asp-page="/Partii/Index">@localizer.Get("Ski tracks")</a>
                         </li>
                     </ul>
                 </div>
@@ -40,7 +40,7 @@
 
     <footer class="border-top footer text-light bg-dark">
         <div class="container">
-            &copy; 2020 - InfoPârtiiSchi - <a asp-area="" asp-page="/Privacy">@localizer.Get("Privacy")</a>
+            &copy; 2020 - InfoPârtiiSchi - <a asp-area="" asp-page="/Help">@localizer.Get("Help")</a>
         </div>
     </footer>
 
